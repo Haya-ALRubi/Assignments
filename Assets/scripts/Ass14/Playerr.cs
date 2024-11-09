@@ -8,7 +8,7 @@ public class Playerr : Character
 
     public void Heal()
     {
-        Health =+ 5;
+        Health += 5;
         if (Health > 100)
         {
             Health = 100;

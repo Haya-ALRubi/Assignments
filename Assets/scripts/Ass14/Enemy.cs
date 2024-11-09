@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-        public void Attack()
+        public void Attack(Character victim, int amount)
     {
-        Health -= 10;
+        Character.Health -= amount ;
         if (Health < 0)
         {
             Health = 0;
