@@ -28,7 +28,7 @@ namespace Assignment18
         public Character() : this("No name", 100, new Position(0, 0, 0)) { }
         public virtual void DisplayInfo()
         {
-            Debug.Log("Name: " + name + "Health: " + health);
+            Debug.Log("Name: " + name + " " + "Health: " + health);
             position.PrintPosition();
         }
         public void Attack(int damage, Character target)
