@@ -14,13 +14,13 @@ public class GameManagerr : MonoBehaviour
         Debug.Log(enemy.Health);
         Debug.Log(enemy.Health);
         player.Heal();
-        enemy.Attack();
+        enemy.Attack(player, 10);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

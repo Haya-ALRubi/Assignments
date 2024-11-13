@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character
 {
-   
+
     public string characterName;
     public string CharacterName
     {
@@ -17,11 +17,11 @@ public class Character
         get;
         set;
     }
-    public Character(string name, int health)
-    {
-        this.CharacterName = name;
-        this.Health = health;
-    }
+    // public Character(string name, int health)
+    // {
+    //     this.CharacterName = name;
+    //    this.Health = health;
+    // }
 
 
 }
