@@ -17,7 +17,7 @@ namespace Assignment18
         }
         public void PrintPosition()
         {
-            Debug.Log("Position: " + (x, y, z));
+            Debug.Log($"Position: x={x}, y={y}, z={z}");
         }
     }
 }
