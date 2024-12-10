@@ -25,15 +25,13 @@ namespace Assignment25
         private bool isReturning = false;
 
         private float timer = 0f;
-        //private float elementtimeAppear = 0.6f;
-        //private float dioramatimeAppear = 5f;
+     
         public Vector3 elementScale = new Vector3(0.01f, 0.01f, 0.01f);
         void Start()
         {
             intialRotaion = transform.rotation;
             diorama.localScale = new Vector3(0, 1, 1);
-            //oneElemnts.localScale = new Vector3(0, 0, 0);
-            //TwoElemnts.localScale = new Vector3(0, 0, 0);
+
             oneElemnts.localScale = new Vector3(0, 1, 1);
             TwoElemnts.localScale = new Vector3(0, 1, 1);
 
