@@ -25,7 +25,7 @@ namespace Assignment25
         private bool isReturning = false;
 
         private float timer = 0f;
-     
+
         public Vector3 elementScale = new Vector3(0.01f, 0.01f, 0.01f);
         void Start()
         {
@@ -37,7 +37,6 @@ namespace Assignment25
 
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (isRotating)
