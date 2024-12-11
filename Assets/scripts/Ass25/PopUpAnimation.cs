@@ -54,11 +54,11 @@ namespace Assignment25
             {
                 rotationTimer += Time.deltaTime;
                 transform.rotation = Quaternion.Lerp(transform.rotation, intialRotaion, rotationTimer);
-                //if (rotationTimer >= 1f)
-                //{
-                //    transform.rotation = intialRotaion;
-                //    isReturning = false;
-                // }
+                if (rotationTimer >= 1f)
+                {
+                    transform.rotation = intialRotaion;
+                    isReturning = false;
+                }
             }
 
             timer += Time.deltaTime;
