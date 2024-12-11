@@ -19,7 +19,7 @@ namespace Assignment25
         public float speed = 20f;
         private bool isRotating = true;
         public float rotationSpeed = 20f;
-        public float rotationDuration = 5f;
+        public float rotationDuration = 2f;
         private float rotationTimer = 0f;
         private Quaternion intialRotaion;
         private bool isReturning = false;
@@ -42,7 +42,7 @@ namespace Assignment25
             if (isRotating)
             {
                 rotationTimer += Time.deltaTime;
-                transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime * 2);
+                transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime * 3);
                 if (rotationTimer >= rotationDuration)
                 {
                     isRotating = false;
@@ -65,7 +65,7 @@ namespace Assignment25
 
             if (Input.GetMouseButton(0) && currentRotation < maxAngle)
             {
-                Camera.main.focalLength = 60f;
+
                 float rotationStep = speed * Time.deltaTime * 2;
                 currentRotation += rotationStep;
                 pageOne.Rotate(Vector3.forward, rotationStep);
