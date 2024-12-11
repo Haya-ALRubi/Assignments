@@ -18,8 +18,8 @@ namespace Assignment25
         private float currentRotation = 0f;
         public float speed = 20f;
         private bool isRotating = true;
-        public float rotationSpeed = 10f;
-        public float rotationDuration = 20f;
+        public float rotationSpeed = 20f;
+        public float rotationDuration = 5f;
         private float rotationTimer = 0f;
         private Quaternion intialRotaion;
         private bool isReturning = false;
@@ -65,6 +65,7 @@ namespace Assignment25
 
             if (Input.GetMouseButton(0) && currentRotation < maxAngle)
             {
+                Camera.main.focalLength = 60f;
                 float rotationStep = speed * Time.deltaTime * 2;
                 currentRotation += rotationStep;
                 pageOne.Rotate(Vector3.forward, rotationStep);
