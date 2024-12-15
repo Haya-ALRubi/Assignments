@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
-namespace Assignment25
+namespace Assignment25Test
 {
+
     public class CameraMovement : MonoBehaviour
     {
         public Transform target;
