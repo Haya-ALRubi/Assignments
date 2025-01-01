@@ -8,8 +8,10 @@ namespace Assignment29
         //Fn =(Fn - 1) + (Fn -2)
         void Start()
         {
-            Debug.Log(FibonacciRecursive(10));
-            Debug.Log(FibonacciIterative(30));
+            Debug.Log($"FibonacciRecursive(10) = {FibonacciRecursive(10)}");
+            Debug.Log($"FibonacciIterative(10) = {FibonacciIterative(10)}");
+            Debug.Log($"FibonacciRecursive(30) = {FibonacciRecursive(30)}");
+            Debug.Log($"FibonacciIterative(30) = {FibonacciIterative(30)}");
         }
         public int FibonacciRecursive(int n)
         {
