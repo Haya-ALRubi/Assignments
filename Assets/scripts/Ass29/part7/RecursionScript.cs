@@ -6,6 +6,7 @@ namespace Assignment29
     public class RecursionScript : MonoBehaviour
     {
         //Fn =(Fn - 1) + (Fn -2)
+
         void Start()
         {
             Debug.Log($"FibonacciRecursive(10) = {FibonacciRecursive(10)}");
@@ -19,16 +20,15 @@ namespace Assignment29
         }
         public int FibonacciIterative(int n)
         {
-            int a = 0, b = 1, result;
+            List<int> fibonacc = new List<int>() { 0, 1 };
             if (n <= 1) return n;
             for (int i = 2; i <= n; i++)
             {
-                result = a + b;
-                a = b;
-                b = result;
+                int newNumber = fibonacc[i - 1] + fibonacc[i - 2];
+                fibonacc.Add(newNumber);
             }
 
-            return b;
+            return fibonacc[n];
 
         }
     }

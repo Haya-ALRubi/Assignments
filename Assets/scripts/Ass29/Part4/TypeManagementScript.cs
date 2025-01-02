@@ -9,17 +9,15 @@ namespace Assignment29
     }
     public class TypeManagementScript : MonoBehaviour
     {
-
-        Cat cat = new Cat();
         List<ICanFight> canFightsObjects = new List<ICanFight> { new Cat(), new Warrior() };
         void Start()
         {
-            Animal animal = cat;
+            Animal animal = new Cat();
             animal.MakeSound();
             animal.Move();
-            Cat animalBack = animal as Cat;
-            cat.MakeSound();
-            cat.Move();
+            (animal as Cat)?.MakeSound();
+            (animal as Cat)?.Move();
+
             foreach (ICanFight fightObject in canFightsObjects)
             {
                 fightObject.Attack();
@@ -39,7 +37,7 @@ namespace Assignment29
         public class Cat : Animal, ICanFight
         {
             public override void MakeSound() => Debug.Log("Meow!");
-            public void Move() => Debug.Log("Cat runs quickly.");
+            public new void Move() => Debug.Log("Cat runs quickly.");
             public void Attack() => Debug.Log("Cat attacks with claws!");
         }
         public class Warrior : ICanFight
