@@ -5,13 +5,14 @@ namespace Assignment35
 {
     public class BoxingUnboxing : MonoBehaviour
     {
-        private int health = 100;
+        int health = 100;
         void Start()
         {
             Debug.Log($"The original int value: {health}");
-            //object health;
+            object obj = health;
             Debug.Log($"The boxed value: {health}");
-            health = (int)70;
+            health = (int)obj;
+            health = 70;
             Debug.Log($"The unboxed and modified value: {health}");
 
 
